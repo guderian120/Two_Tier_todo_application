@@ -12,7 +12,6 @@ This project demonstrates the setup of a two-tier application hosted on AWS EC2 
 - [After Partitioning the Application](#after-partitioning-the-application)
   - [Private Subnet Setup for Database](#private-subnet-setup-for-database)
   - [Configuring Nginx Reverse Proxy](#configuring-nginx-reverse-proxy)
-  - [Testing Partitioned Application](#testing-partitioned-application)
 
 ---
 

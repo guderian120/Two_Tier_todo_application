@@ -1,0 +1,38 @@
+version: latest
+
+services:
+  # Your Node.js App
+  app:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app  # Mounts current directory to /app
+    command: sh -c "yarn install && yarn run dev"  # Installs + starts app
+    environment:
+      MYSQL_HOST: 10.0.0.94  # Private IP of MySQL instance
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: todos
+    networks:
+      - app_network
+#    depends_on:
+ #     mysql:
+  #      condition: service_healthy  # Optional (if MySQL is in same compose file)
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"    # HTTP
+      - "443:443"  # HTTPS (add certs later)
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf  # Custom Nginx config
+     # - ./public:/usr/share/nginx/html      # Static files (optional)
+    depends_on:
+      - app  # Waits for Node.js to start
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

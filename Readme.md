@@ -120,5 +120,3 @@ AWS VPC (10.0.0.0/16)
 This application demonstrates a secure architecture using AWS EC2, Docker, and Docker Compose. The partitioning of the application into public and private subnets ensures that the MySQL database is isolated from the public internet, while the front-end application remains accessible. This setup also enhances the scalability and security of the system.
 ```
 
----
-

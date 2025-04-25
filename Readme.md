@@ -73,6 +73,7 @@ sudo curl -SL https://github.com/docker/compose/releases/latest/download/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose.yml
+```
 version: '3.8'
 
 services:
@@ -146,9 +147,11 @@ networks:
 
 volumes:
   mysql_data:
+```
 
 
 🌐 NGINX Reverse Proxy Configuration
+```
 
 nginx.conf
 user  nginx;
@@ -191,8 +194,9 @@ http {
         }
     }
 }
-
+```
 docker-compose-nginx.yml
+```
 version: '3.8'
 
 services:
@@ -212,6 +216,7 @@ networks:
   app_network:
     driver: bridge
 
+```
 
 ✅ Verification & Health Checks
 

@@ -18,7 +18,21 @@ This project demonstrates a complete VPC architecture in AWS with Dockerized app
 
 
 
-AWS VPC (10.0.0.0/24) ├── Public Subnet (10.0.0.0/25) │ └── EC2 Instance (NGINX + Node App) │ - Elastic IP / Public IP │ - Security Group allows HTTP/HTTPS ├── Private Subnet (10.0.0.128/25) │ └── EC2 Instance (MySQL) │ - No public IP │ - Security Group allows port 3306 from NGINX SG └── NAT Gateway - Enables outbound internet from private subnet
+AWS VPC (10.0.0.0/24) 
+
+       ├── Public Subnet (10.0.0.0/25) │ 
+
+                └── EC2 Instance (NGINX + Node App) │
+
+		 - Elastic IP / Public IP │ - Security Group allows HTTP/HTTPS 
+
+	├── Private Subnet (10.0.0.128/25) │ 
+
+		└── EC2 Instance (MySQL) │
+
+		 - No public IP │ - Security Group allows port 3306 from NGINX SG 
+
+		└── NAT Gateway - Enables outbound internet from private subnet
 
 ---
 

@@ -1,5 +1,4 @@
-
-```markdown
+```
 # EC2 Instance Management and Docker Compose Application
 
 This project demonstrates the setup of a two-tier application hosted on AWS EC2 instances with Docker Compose, featuring a front-end application in a public subnet and a database in a private subnet for enhanced security. The goal is to set up a robust and secure architecture using AWS VPC, subnets, EC2, Docker, and Docker Compose.
@@ -123,8 +122,3 @@ This application demonstrates a secure architecture using AWS EC2, Docker, and D
 
 ---
 
-### Key Updates:
-1. **Before Partitioning**: Describes the initial setup where both the application and database were in the same subnet, accessible from the public internet.
-2. **After Partitioning**: Describes how the application was partitioned into a two-tier system, with the database in a private subnet and a reverse proxy (Nginx) in the public subnet, ensuring better security.
-
-This structure should clearly indicate the flow and how the application evolved from a single-tier setup to a more secure, partitioned architecture.
